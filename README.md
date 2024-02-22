@@ -2,8 +2,6 @@
 > 项目地址：https://github.com/JollyCorivuG/api-cloud
 
 # SDK 架构模式
-<<<<<<< HEAD
-=======
 ![](https://github.com/JollyCorivuG/api-cloud-client-sdk/blob/main/docs/%E6%9E%B6%E6%9E%84%E5%9B%BE.png)
 
 # SDK 使用步骤
@@ -27,9 +25,14 @@ apicloud:
 ApiCloudClient apiCloudClient = new ApiCloudClient(userInfo.getAccessKey(), userInfo.getSecretKey());
 ```
 ### 第二种方式：配置文件中指定 ak/sk
-
-## 设置参数并得到响应
 ```
+apicloud:
+  client:
+    accessKey: xxx
+    secretKey: xxx
+```
+## 设置参数并得到响应
+```java
 // 构造请求
 SDKCommonReq sdkReq = new SDKCommonReq();
 sdkReq.setPath(apiInterface.getHost() + apiInterface.getUrl());
@@ -38,4 +41,4 @@ sdkReq.setRequestParams(req.getUserReqParams());
 // 得到响应
 SDKCommonResp sdkResp = apiService.request(apiCloudClient, sdkReq);
 ```
->>>>>>> 18fd80a5ea7ff2595235ad45d1605b48b243cf5e
+
