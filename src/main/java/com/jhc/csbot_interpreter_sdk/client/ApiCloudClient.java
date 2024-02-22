@@ -1,4 +1,4 @@
-package bupt.edu.jhc.apicloud_client_sdk.client;
+package com.jhc.csbot_interpreter_sdk.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
